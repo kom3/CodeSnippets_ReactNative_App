@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native"
+import { View, ImageBackground, Text, StyleSheet } from "react-native"
 
 export default function HomeScreen(props) {
     return <View style={styles.container}>
@@ -13,6 +13,23 @@ export default function HomeScreen(props) {
         </View>
         <View style={styles.statustxt}>
             <Text style={styles.clorwht}>Currenltly there are <Text style={{ ...styles.clorgreen, ...styles.statushltxt }}>1023</Text> code snippets available</Text>
+        </View>
+
+        <View style={styles.options_wrpr}>
+            <View>
+                <View style={styles.option_row}>
+                    <ImageBackground source={require("./ask.png")} resizeMode="cover" style={styles.image}></ImageBackground>
+
+                    <ImageBackground source={require("./ask.png")} resizeMode="cover" style={styles.image}></ImageBackground>
+                </View>
+                <View style={styles.option_row}>
+                    <View>
+                        <ImageBackground source={require("./ask.png")} resizeMode="cover" style={styles.image}></ImageBackground>
+                    </View>
+
+                    <View><ImageBackground source={require("./ask.png")} resizeMode="cover" style={styles.image}></ImageBackground></View>
+                </View>
+            </View>
         </View>
     </View>
 }
@@ -35,7 +52,7 @@ const styles = StyleSheet.create({
         elevation: 2,
         height: 50,
         display: 'flex',
-        width:"100%",
+        width: "100%",
         flexDirection: 'row',
         alignItems: "center",
         justifyContent: 'center'
@@ -76,7 +93,7 @@ const styles = StyleSheet.create({
         alignItems: "center",
         width: 357,
         height: 80,
-        marginTop:15,
+        marginTop: 15,
         backgroundColor: "rgba(29, 74, 191, 1)",
         borderRadius: 12,
     },
@@ -92,5 +109,31 @@ const styles = StyleSheet.create({
         fontFamily: "Ubuntu",
         fontWeight: "700",
         fontSize: 24
+    },
+
+    options_wrpr: {
+        marginTop: 50,
+        backgroundColor: "rgba(241, 241, 241, 1)",
+        height: 400,
+        width: "90%",
+        // flex: 1,
+        justifyContent: "center",
+        flexDirection: "row",
+        alignItems: "center",
+    },
+
+    image: {
+        flex: 1,
+        justifyContent: "space-between",
+        height: 130,
+        flexDirection: "row",
+        width: 130
+    },
+
+    option_row: {
+        flex: 1,
+        flexDirection: "row",
+        justifyContent: "space-around",
+        alignItems: "center",
     }
 });
