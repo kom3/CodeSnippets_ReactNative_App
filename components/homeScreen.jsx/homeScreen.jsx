@@ -18,16 +18,16 @@ export default function HomeScreen(props) {
         <View style={styles.options_wrpr}>
             <View>
                 <View style={styles.option_row}>
-                    <ImageBackground source={require("./ask.png")} resizeMode="cover" style={styles.image}></ImageBackground>
+                    <ImageBackground source={require("../../assets/create.png")} resizeMode="cover" style={styles.image}></ImageBackground>
 
-                    <ImageBackground source={require("./ask.png")} resizeMode="cover" style={styles.image}></ImageBackground>
+                    <ImageBackground source={require("../../assets/view.jpg")} resizeMode="cover" style={styles.image2}></ImageBackground>
                 </View>
                 <View style={styles.option_row}>
                     <View>
-                        <ImageBackground source={require("./ask.png")} resizeMode="cover" style={styles.image}></ImageBackground>
+                        <ImageBackground source={require("../../assets/drafts.png")} resizeMode="cover" style={styles.image}></ImageBackground>
                     </View>
 
-                    <View><ImageBackground source={require("./ask.png")} resizeMode="cover" style={styles.image}></ImageBackground></View>
+                    <View><ImageBackground source={require("../../assets/ask.png")} resizeMode="cover" style={styles.image2}></ImageBackground></View>
                 </View>
             </View>
         </View>
@@ -116,18 +116,25 @@ const styles = StyleSheet.create({
         backgroundColor: "rgba(241, 241, 241, 1)",
         height: 400,
         width: "90%",
+        display: "flex",
         // flex: 1,
         justifyContent: "center",
-        flexDirection: "row",
+        // flexDirection: "row",
         alignItems: "center",
     },
 
     image: {
-        flex: 1,
-        justifyContent: "space-between",
+        // flex: 1,
+        // justifyContent: "space-between",
         height: 130,
-        flexDirection: "row",
+        // flexDirection: "row",
         width: 130
+    },
+
+    image2: {
+        width: 130,
+        height: 130,
+        marginLeft: 50
     },
 
     option_row: {
@@ -136,4 +143,5 @@ const styles = StyleSheet.create({
         justifyContent: "space-around",
         alignItems: "center",
     }
+
 });
